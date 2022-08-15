@@ -241,6 +241,6 @@ client.on("guildMemberAdd", async(member) => {
 
 
 
-client.login(config.token)
+client.login(process.env.token)
 
 
