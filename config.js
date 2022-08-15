@@ -1,6 +1,5 @@
 module.exports = {
     token: "", 
-    prefix: "-"  
+    prefix: "r!"  
   
 }
-

@@ -31,8 +31,9 @@ const row = new ActionRowBuilder()
       )
     
     let embed = new EmbedBuilder()
-.setTitle("Yardım Menüsü")
-.setDescription("Yardım Menüsüne Hoşgeldin!")
+.setTitle("***Yardım Menüsü***")
+.setDescription(`**Yardım Menüsüne Hoşgeldin!**
+Moderasyon Komutları İçin:                 `)
 message.channel.send({embeds: [embed], components: [row]})
 
 
