@@ -33,13 +33,16 @@ const row = new ActionRowBuilder()
     let embed = new EmbedBuilder()
 .setTitle("***Yardım Menüsü***")
 .setDescription(`**Yardım Menüsüne Hoşgeldin!**
-Moderasyon Komutları İçin:                 `)
+
+Moderasyon Komutları İçin:         
+
+Kullanıcı Komutları için: `)
 message.channel.send({embeds: [embed], components: [row]})
 
 
 };
 exports.conf = {
-  aliases: []
+  aliases: ["help","y"]
 };
 
 exports.help = {

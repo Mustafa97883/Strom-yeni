@@ -8,7 +8,7 @@ const PARTIALS = Object.values(Partials);
 const client = global.client = new Discord.Client({
     intents: INTENTS,
     allowedMentions: {
-        parse: ["users"]
+    parse: ["users"]
     },
     partials: PARTIALS,
     retryLimit: 3
@@ -48,7 +48,7 @@ client.on("interactionCreate", async (interaction, message) => {
         
         const embed = new Discord.EmbedBuilder()
         .setTitle("Moderasyon Komutları!")
-    .setDescription(`${prefix}ban\n${prefix}kick\n${prefix}oto-rol\n${prefix}temizle\n${prefix}hg-bb\n${prefix}başvur\n${prefix}başvuru-kanal\n${prefix}başvuru-log\n${prefix}başvuru-rol\n${prefix}kayıt-rol\n${prefix}kayıt\n${prefix}kayıt-log`) 
+        .setDescription(`${prefix}ban\n${prefix}kick\n${prefix}oto-rol\n${prefix}temizle\n${prefix}hg-bb\n${prefix}başvur\n${prefix}başvuru-kanal\n${prefix}başvuru-log\n${prefix}başvuru-rol\n${prefix}kayıt-rol\n${prefix}kayıt\n${prefix}kayıt-log`) 
         .setTimestamp()
    
         
@@ -59,7 +59,7 @@ client.on("interactionCreate", async (interaction, message) => {
         
         const embed = new Discord.EmbedBuilder()
       .setTitle("Kullanıcı Komutlarım!")
-    .setDescription(`${prefix}istatistik\n${prefix}ping\n${prefix}yardım\n${prefix}avatar\n${prefix}sunucu\n${prefix}snake\n${prefix}snipe`)
+      .setDescription(`${prefix}istatistik\n${prefix}ping\n${prefix}yardım\n${prefix}avatar\n${prefix}sunucu\n${prefix}snake\n${prefix}snipe`)
      
         .setTimestamp()
   
