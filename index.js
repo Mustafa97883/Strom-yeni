@@ -48,6 +48,7 @@ client.on("interactionCreate", async (interaction, message) => {
         
         const embed = new Discord.EmbedBuilder()
         .setTitle("***Yardım Menüsü***")
+        .setImage(`https://i.hizliresim.com/a71x6xu.jpg`)
         .setDescription(`**Yardım Menüsüne Hoşgeldin!**
         
         **Anamenü için:** <:729507302760792:1008829417394552923>
@@ -55,9 +56,8 @@ client.on("interactionCreate", async (interaction, message) => {
         **Moderasyon Komutları İçin:** <:780436202360632:1008829011499176167>
 
         **Kullanıcı Komutları için:** <:7390464307626:1008830365789593692>`)
-
    
-        
+       
         await message.edit({embeds: [embed]})
       
       } else if(value[0] === "moderasyon") {
@@ -75,7 +75,7 @@ client.on("interactionCreate", async (interaction, message) => {
         await interaction.deferUpdate()
         
         const embed = new Discord.EmbedBuilder()
-      .setTitle("Kullanıcı Komutlarım!")
+      .setTitle("Kullanıcı Komutları!")
       .setDescription(`${prefix}istatistik\n${prefix}ping\n${prefix}yardım\n${prefix}avatar\n${prefix}sunucu\n${prefix}snake\n${prefix}snipe`)
      
         .setTimestamp()

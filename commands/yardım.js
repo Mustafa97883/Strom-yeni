@@ -38,6 +38,7 @@ const row = new ActionRowBuilder()
     
     let embed = new EmbedBuilder()
 .setTitle("***Yardım Menüsü***")
+.setImage(`https://i.hizliresim.com/a71x6xu.jpg`)
 .setDescription(`**Yardım Menüsüne Hoşgeldin!**
 
 **Anamenü için:** <:729507302760792:1008829417394552923>
