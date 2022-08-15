@@ -7,7 +7,7 @@ const row = new ActionRowBuilder()
     .addComponents(
       new SelectMenuBuilder()
       .setCustomId("yardım")
-      .setPlaceholder('Yardım Menüsüne Hoşgeldin!')
+      .setPlaceholder('Yardım Menüsü Komutları')
       .setMinValues(1)
       .setMaxValues(1)
       .addOptions([
@@ -17,19 +17,19 @@ const row = new ActionRowBuilder()
           label:"Anamenü" ,
           description:"Ana Menü",
           value:"anamenü",
-          emoji:"869707733685927936"
+          emoji:"<:729507302760792:1008829417394552923>"
         },
         {
           label:"Moderasyon" ,
           description:"Moderasyon Komutları",
           value:"moderasyon",
-          emoji:"869707733685927936"
+          emoji:"<:780436202360632:1008829011499176167>"
         },
         {
           label:"Kullanıcı",
           description:"Kullanıcı komutları",
           value:"kullanıcı",
-          emoji:"869707733685927936"
+          emoji:"<:7390464307626:1008830365789593692>"
         }
       
         
@@ -40,11 +40,11 @@ const row = new ActionRowBuilder()
 .setTitle("***Yardım Menüsü***")
 .setDescription(`**Yardım Menüsüne Hoşgeldin!**
 
-**Anamenü için:**
+**Anamenü için:** <:729507302760792:1008829417394552923>
 
-**Moderasyon Komutları İçin:**
+**Moderasyon Komutları İçin:** <:780436202360632:1008829011499176167>
 
-**Kullanıcı Komutları için:** `)
+**Kullanıcı Komutları için:** <:7390464307626:1008830365789593692>`)
 message.channel.send({embeds: [embed], components: [row]})
 
 

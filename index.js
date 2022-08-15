@@ -50,12 +50,12 @@ client.on("interactionCreate", async (interaction, message) => {
         .setTitle("***Yardım Menüsü***")
         .setDescription(`**Yardım Menüsüne Hoşgeldin!**
         
-        **Anamenü için:** 
+        **Anamenü için:** <:729507302760792:1008829417394552923>
 
-        **Moderasyon Komutları İçin:** 
+        **Moderasyon Komutları İçin:** <:780436202360632:1008829011499176167>
 
-        **Kullanıcı Komutları için:** `)
-        .setTimestamp()
+        **Kullanıcı Komutları için:** <:7390464307626:1008830365789593692>`)
+
    
         
         await message.edit({embeds: [embed]})
