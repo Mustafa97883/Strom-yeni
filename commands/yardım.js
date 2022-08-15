@@ -14,14 +14,20 @@ const row = new ActionRowBuilder()
        
  
         {
+          label:"Anamenü" ,
+          description:"Ana Menü",
+          value:"anamenü",
+          emoji:"869707733685927936"
+        },
+        {
           label:"Moderasyon" ,
-          description:"Moderasyon Komutlarını Görürsün!",
+          description:"Moderasyon Komutları",
           value:"moderasyon",
           emoji:"869707733685927936"
         },
         {
           label:"Kullanıcı",
-          description:"Kullanıcı komutlarını görürsün!",
+          description:"Kullanıcı komutları",
           value:"kullanıcı",
           emoji:"869707733685927936"
         }
@@ -34,9 +40,11 @@ const row = new ActionRowBuilder()
 .setTitle("***Yardım Menüsü***")
 .setDescription(`**Yardım Menüsüne Hoşgeldin!**
 
-Moderasyon Komutları İçin:         
+**Anamenü için:**
 
-Kullanıcı Komutları için: `)
+**Moderasyon Komutları İçin:**
+
+**Kullanıcı Komutları için:** `)
 message.channel.send({embeds: [embed], components: [row]})
 
 

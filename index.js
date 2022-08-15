@@ -43,7 +43,24 @@ client.on("interactionCreate", async (interaction, message) => {
       let message = await interaction.channel.messages.fetch(interaction.message.id)
       let value = interaction.values
       
-      if(value[0] === "moderasyon") {
+      if(value[0] === "anamenü") {
+        await interaction.deferUpdate()
+        
+        const embed = new Discord.EmbedBuilder()
+        .setTitle("***Yardım Menüsü***")
+        .setDescription(`**Yardım Menüsüne Hoşgeldin!**
+        
+        **Anamenü için:** 
+
+        **Moderasyon Komutları İçin:** 
+
+        **Kullanıcı Komutları için:** `)
+        .setTimestamp()
+   
+        
+        await message.edit({embeds: [embed]})
+      
+      } else if(value[0] === "moderasyon") {
         await interaction.deferUpdate()
         
         const embed = new Discord.EmbedBuilder()
