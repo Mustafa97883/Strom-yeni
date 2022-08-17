@@ -8,15 +8,10 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 **Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
 **Onay sürecinde olduğu için bazı komutlar çalışamaz!**
 
-• **s!moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
-• **s!guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
-• **s!yardım-sunucu-kur**       \`Sunucu-kur komutlarını gösterir.\`\n
-• **s!rütbe-yardım**      \`rütbe sistemini gösterir. \`\n
-• **s!eğlence-yardım**        \`Eğlence komutlarını gösterir.\` \n
-• **s!jail-yardım**      \`jail komutlarını gösterir.\` \n
-• **s!çekiliş-sistemi**      \`çekiliş komutlarını gösterir.\` \n
-• **s!yardım-botlist**     \`Botlist komutlarını gösterir.\` \n
 
+🎉 **s!reroll**  \`Çekilişi yeniler.\` \n
+🎉 **s!sonlandır**  \`Çekilişi Sonlandırır.\` \n
+🎉 **s!başlat**  \`Çekilişi Başlatır.\` \n
 
 
 `)
@@ -25,11 +20,11 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 message.channel.send(cse)
 }
 module.exports.conf = {
-aliases: ["yardim","help"]
+aliases: ["çekiliş-sistemi"]
 }
 
 module.exports.help = {
-name: "yardım",
-usage: "!yardım"
+name: "yardım-çekiliş",
+usage: "!yardım-çekiliş"
 
 };
