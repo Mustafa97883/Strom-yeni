@@ -3,7 +3,10 @@ const db = require('quick.db');
 
 
 exports.run = function(client, message, args) {
-  
+  const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjYwNzM0NTkyfQ.Tci7n9zVPbCAfU70t8CccDiH7lg7pGrvYHnIvRk9f1s', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`:no_entry: Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
 	if(!args[0]) return message.channel.send(new Discord.MessageEmbed()
                                           .setTitle("Doğru Kullanım:")
@@ -60,6 +63,12 @@ exports.run = function(client, message, args) {
    }
 
 
+      
+      } else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
       
       },
 exports.conf = {

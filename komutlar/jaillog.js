@@ -15,7 +15,7 @@ dbl.hasVoted(message.author.id).then(voted => {
    var x2 = başarısız[Math.floor(Math.random() * başarısız.length)];
   
 if (!message.member.hasPermission('MANAGE_GUILD')) return message.reply(`**s!jail-kanal ayarla/sıfırla** isimli komutu kullanabilmek için \`SUNUCUYU YÖNET\` yetkisine sahip olman gerekiyor.`)
-if (!args[0]) return message.reply(`Sistemi kullanabilmek için, !sjail-kanal ayarla/sıfırla #kanal yazmalısın.`)
+if (!args[0]) return message.reply(`Sistemi kullanabilmek için, s!jail-kanal ayarla/sıfırla #kanal yazmalısın.`)
    
   
   if (args[0] == 'ayarla') {
