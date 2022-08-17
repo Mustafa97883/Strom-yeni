@@ -51,7 +51,7 @@ let prefix = ayarlar.prefix;
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ["istatistik","istatistikler"],
   permLevel: 0
 };
 
