@@ -4,7 +4,10 @@ let prefix = ayarlar.prefix;
 
 
 exports.run = async (bot, msg, args, client) => {
-  
+  const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjYwNzM0NTkyfQ.Tci7n9zVPbCAfU70t8CccDiH7lg7pGrvYHnIvRk9f1s', client)
+dbl.hasVoted(msg.author.id).then(voted => {
+      if(voted) {
   const çekiliş = new Discord.MessageEmbed()
     .setAuthor(`Strom  | Ticket Sistem`)
     .setTitle(``)
@@ -53,6 +56,12 @@ exports.run = async (bot, msg, args, client) => {
     );
   msg.channel.send(çekiliş);
 
+      
+     } else {
+        msg.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
       
       },
 exports.conf = {
