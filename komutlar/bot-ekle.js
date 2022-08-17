@@ -36,7 +36,9 @@ exports.run = function(client, message, args) {
   message.channel.send(`✔️ Bot ekleme isteğiniz alındı.`)
     .then(msg => msg.delete(1000))
   }
-};
+
+      
+      },
 
 exports.conf = {
   enabled: true,
