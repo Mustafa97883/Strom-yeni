@@ -1,29 +1,14 @@
-const client = require("../index");
-const { Collection } = require("discord.js")
-const fs = require("fs")
-const config = require("../config.js")
-let prefix = config.prefix
-client.on("ready", () => {
+ const Strom = require('discord.js');
+const ayarlar = require('../ayarlar.json');
 
-client.user.setActivity(`${prefix}yardım`)
+module.exports = async client => {
+  var oyun = ["🔥s!güncellemeler🔥","🔥s!yardım🔥","🔥s!davet🔥","🔥s!oyver🔥","🔥s!eğlence🔥","🔥s!güncellemeler🔥","🔥s!guard🔥","🔥s!moderasyon🔥","⚠️Herhangi bir hatada s!hata⚠️"];
 
-client.commands = new Collection();
-client.aliases = new Collection();
-fs.readdir("./commands/", (err, files) => {
-if (err) console.error(err);
-console.log(`Toplam ${files.length} tane komut var!`);
-files.forEach(f => {
-let props = require(`../commands/${f}`);
-    
-console.log(`${props.help.name} Adlı Komut Yüklendi!`);
+  setInterval(async () => {
+    var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
 
-    
-client.commands.set(props.help.name, props);
-props.conf.aliases.forEach(alias => {
-client.aliases.set(alias, props.help.name);
-console.log(`${client.user.tag} Aktif!`)
-});
-});
-});
+    client.user.setActivity(oyun[random], { type: "WATCHING" });
+  }, 10000);
+  client.user.setStatus("dnd");
 
-});
+}
